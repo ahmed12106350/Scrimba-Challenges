@@ -1,4 +1,44 @@
 html, body {
     margin: 0;
     padding: 0;
+    background-color: #494a4e;
+}
+#section-1
+{
+    display: flex;
+    justify-content: center;
+    margin-top:100px;
+    gap: 20px;
+    
+}
+
+#color-mode{
+    width:200px
+}
+#pallete {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+#color-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.color {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+#color-box p {
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
 }
