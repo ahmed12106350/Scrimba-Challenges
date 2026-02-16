@@ -19,6 +19,20 @@ const images = [
 async function preloadImages(imageUrlsArr) {
     const imgContainer = document.getElementById('img-container')
     const uploadContainer = document.getElementById('upload-container')
+    
+    
+    try{
+    const promises = imageUrlsArr.map((url)=> getImagePromise(url) )
+    const results = await Promise.all(promises)
+    console.log("ALL images loaded succesfully")
+    uploadContainer.style.display="none"
+    results.forEach(img => imgContainer.append(img))
+    }
+    catch(err){
+        alert(err)
+    }
+    
+    
 /*
 Challenge:
   1. Create an array of promises using getImagePromise.
